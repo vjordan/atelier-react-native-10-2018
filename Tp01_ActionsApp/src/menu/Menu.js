@@ -7,9 +7,9 @@ import OptionMenu from './OptionMenu'
  */
 const Menu = () => (
     <View style={styles.menu}>
-        <OptionMenu />
-        <OptionMenu />
-        <OptionMenu  />
+        <OptionMenu nom="Toutes"/>
+        <OptionMenu nom="Actives"/>
+        <OptionMenu nom="Terminées"/>
     </View>
 )
 

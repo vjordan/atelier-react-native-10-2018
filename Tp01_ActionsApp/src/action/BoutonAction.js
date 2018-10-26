@@ -17,8 +17,8 @@ const BoutonAction = ({nom}) => (
     <TouchableHighlight
         underlayColor='#efefef'
         style={styles.bouton}>
-        <Text style={styles.texte}>
-            A changer
+        <Text style={[styles.texte, nom=="Supprimer" ? styles.supprimer : (nom=="Terminer" ? styles.termine : styles.texte)]}>
+            {nom}
         </Text>
     </TouchableHighlight>
 )

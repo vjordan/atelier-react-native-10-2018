@@ -1,13 +1,17 @@
 import React from 'react'
-import {View, Text} from 'react-native'
+import {View, Text, FlatList} from 'react-native'
 import UneAction from './UneAction'
 
 
-const ListeActions = () => {
+const ListeActions = ({listeActions}) => {
 
     return (
         <View>
-            <Text>Ici prochainement une liste d'actions</Text>
+            <FlatList
+                data={listeActions}
+                renderItem={({item}) => <UneAction actionTitle={item}></UneAction>}
+                keyExtractor={(item, index) => item}
+            />
         </View>
     )
 }
